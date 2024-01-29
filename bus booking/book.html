@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus booking</title>
+    <link rel="shortcut icon" href="images/logobus.PNG">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- bootstrap cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+<!-- aos -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- fontasome cdn -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+  /* #btn{
+    animation-name: btn;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  @keyframes btn {
+    0%{
+      rotate: 20deg;
+    }
+    100%{
+    rotate: -20deg;
+    }
+  } */
+</style>
+
+</head>
+<body>
+    <div >
+        <nav class="navbar navbar-expand-lg fixed-top "  id="navbar">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="busicon.html">
+                <i class="bi bi-bus-front-fill" id="busicon"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-bus-front-fill" viewBox="0 0 16 16">
+                    <path d="M16 7a1 1 0 0 1-1 1v3.5c0 .818-.393 1.544-1 2v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5V14H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2a2.496 2.496 0 0 1-1-2V8a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1V2.64C1 1.452 1.845.408 3.064.268A43.608 43.608 0 0 1 8 0c2.1 0 3.792.136 4.936.268C14.155.408 15 1.452 15 2.64V4a1 1 0 0 1 1 1zM3.552 3.22A43.306 43.306 0 0 1 8 3c1.837 0 3.353.107 4.448.22a.5.5 0 0 0 .104-.994A44.304 44.304 0 0 0 8 2c-1.876 0-3.426.109-4.552.226a.5.5 0 1 0 .104.994ZM8 4c-1.876 0-3.426.109-4.552.226A.5.5 0 0 0 3 4.723v3.554a.5.5 0 0 0 .448.497C4.574 8.891 6.124 9 8 9c1.876 0 3.426-.109 4.552-.226A.5.5 0 0 0 13 8.277V4.723a.5.5 0 0 0-.448-.497A44.304 44.304 0 0 0 8 4m-3 7a1 1 0 1 0-2 0 1 1 0 0 0 2 0m8 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m-7 0a1 1 0 0 0 1 1h2a1 1 0 1 0 0-2H7a1 1 0 0 0-1 1"/>
+                  </svg>
+              </a>
+              <button class="navbar-toggler text-bg-danger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active text-white" aria-current="page" href="index.html" id="navbtn">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="about.html" id="navbtn">About</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="navbtn">
+                      Services
+                    </a>
+                    <ul class="dropdown-menu text-bg-success">
+                      <li><a class="dropdown-item text-white" href="businfo.html" id="navbtn">Bus Info</a></li>
+                      <li><hr class="dropdown-divider text-white"></li>
+                      <li><a class="dropdown-item text-white" href="book.html" id="navbtn">Booking Bus</a></li>
+                      <li><hr class="dropdown-divider text-white"></li>
+                      <li><a class="dropdown-item text-white" href="package.html" id="navbtn">Packages</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="contact.html" id="navbtn">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="adminlog.html" id="navbtn">Admin</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search" action="subscribers.php" method="post" id="subform">
+                  <input class="form-control me-2" id="subsuc" type="search" placeholder="Subscribe" aria-label="Search" name="subscribe">
+                  <button class="btn btn-outline-warning" type="submit" name="addsub">Subscribe</button>
+                </form>
+              </div>
+            </div>
+          </nav><br><br><br><br><br>
+        </div>
+  
+   
+<section>
+  <div class="container text-center">
+    <div class="row">
+      
+      <div class="col">
+      <h3>Coimbatore(BS)</h3>
+      <p id="sevenDaysAfter"></p>
+      <a href="coich.html" > <button type="button" class="btn btn-warning text-white" id="btn">book now</button></a>
+      </div>
+
+      <div class="col">
+        <h4><i class="fas fa-location fa-beat-fade" style="color: red;"></i>&nbsp;08:50PM
+       &HorizontalLine; &HorizontalLine;
+       <i class="fas fa-map-marker-alt fa-beat-fade" style="color:greenyellow;"></i>&nbsp;04.00AM</h4>
+       <h5 style="color:darkkhaki;">Estimates within 7hrs</h5>
+      </div>
+
+      <div class="col">
+      <h3>Chennai(BS)</h3>
+      <h5  style="color: yellow;">Non A/C Sleeper coach</h5>
+      <h6><i class="fa-solid fa-life-ring fa-2x  fa-spin"></i></h6>
+      </div>
+
+      <div class="col">
+        <h5>Total seats <span style="color: springgreen;">48</span></h5>
+        <i class="fa-solid fa-chair fa-2x chair-icon"></i>
+        <h5>seats left&nbsp;<span id="coich" style="color: springgreen;">00</span></h5>
+        <h6 style="color:lightgreen;">&#8377;1000</h6>
+      </div>
+
+    </div>
+  </div><hr><br>
+  <!--  -->
+  <div class="container text-center">
+    <div class="row">
+      
+      <div class="col">
+      <h3>Coimbatore(BS)</h3>
+      <p id="sevenDaysAfter1"></p>
+      <a href="coiban.html" > <button type="button" class="btn btn-warning text-white" id="btn">book now</button></a>
+      </div>
+
+      <div class="col">
+        <h4><i class="fas fa-location fa-beat-fade" style="color: red;"></i>&nbsp;04:50PM
+       &HorizontalLine; &HorizontalLine;
+       <i class="fas fa-map-marker-alt fa-beat-fade" style="color: greenyellow;"></i>&nbsp;03.00AM</h4>
+       <h5 style="color:darkkhaki;">Estimates within 6hrs</h5>
+      </div>
+
+      <div class="col">
+      <h3>Bangalore(BS)</h3>
+      <h5  style="color: yellow;">A/C Sleeper coach</h5>
+      <h6><i class="fa-solid fa-life-ring fa-2x  fa-spin"></i></h6>
+      </div>
+
+      <div class="col">
+        <h5>Total seats <span style="color: springgreen;">48</span></h5>
+        <i class="fa-solid fa-chair fa-2x chair-icon"></i>
+        <h5>seats left&nbsp;<span id="coiban" style="color: springgreen;">48</span></h5>
+        <h6 style="color:lightgreen;">&#8377;1200</h6>
+      </div>
+
+    </div>
+  </div><hr><br>
+  <!--  -->
+  <div class="container text-center">
+    <div class="row">
+      
+      <div class="col">
+      <h3>Tiruvandrum(BS)</h3>
+      <p id="sevenDaysAfter2"></p>
+      <a href="tirway.html" > <button type="button" class="btn btn-warning text-white" id="btn">book now</button></a>
+      </div>
+
+      <div class="col">
+        <h4><i class="fas fa-location fa-beat-fade" style="color: red;"></i>&nbsp;08:50AM
+       &HorizontalLine; &HorizontalLine;
+       <i class="fas fa-map-marker-alt fa-beat-fade" style="color: greenyellow;"></i>&nbsp;02.00PM</h4>
+       <h5 style="color:darkkhaki;">Estimates within 6hrs</h5>
+      </div>
+
+      <div class="col">
+      <h3>Wayanad(BS)</h3>
+      <h5 style="color: yellow;">Ultra deluxue coach</h5>
+      <h6><i class="fa-solid fa-life-ring fa-2x  fa-spin"></i></h6>
+      </div>
+
+      <div class="col">
+        <h5>Total seats <span style="color: springgreen;">48</span></h5>
+        <i class="fa-solid fa-chair fa-2x chair-icon"></i>
+        <h5>seats left&nbsp;<span id="triway" style="color: springgreen;">48</span></h5>
+        <h6 style="color:lightgreen;">&#8377;1600</h6>
+      </div>
+
+    </div>
+  </div><hr><br>
+  <!--  -->
+  <div class="container text-center">
+    <div class="row">
+      
+      <div class="col">
+      <h3>Bangalore(BS)</h3>
+      <p id="sevenDaysAfter3"></p>
+      <a href="banoo.html" > <button type="button" class="btn btn-warning text-white" id="btn">book now</button></a>
+      </div>
+
+      <div class="col">
+        <h4><i class="fas fa-location fa-beat-fade" style="color: red;"></i>&nbsp;11:30AM
+       &HorizontalLine; &HorizontalLine;
+       <i class="fas fa-map-marker-alt fa-beat-fade" style="color: greenyellow;"></i>&nbsp;05.00PM</h4>
+       <h5 style="color:darkkhaki;">Estimates within 5hrs</h5>
+      </div>
+
+      <div class="col">
+      <h3>Ooty(BS)</h3>
+      <h5  style="color: yellow;">Normal Airdoor</h5>
+      <h6><i class="fa-solid fa-life-ring fa-2x  fa-spin"></i></h6>
+      </div>
+
+      <div class="col">
+        <h5>Total seats <span style="color: springgreen;">48</span></h5>
+        <i class="fa-solid fa-chair fa-2x chair-icon"></i>
+        <h5>seats left&nbsp;<span id="banoo" style="color: springgreen;">48</span></h5>
+        <h6 style="color:lightgreen;">&#8377;850</h6>
+      </div>
+
+    </div>
+  </div><hr><br>
+  <!--  -->
+</section>
+
+<script>
+  function updateSevenDaysAfterDate() {
+            var currentDate = new Date();
+            var sevenDaysAfterDate = new Date(currentDate);
+            sevenDaysAfterDate.setDate(currentDate.getDate() + 2);
+            var options = { year: 'numeric', month: 'long', day: 'numeric' };
+            var formattedDate = sevenDaysAfterDate.toLocaleDateString('en-US', options);
+   
+
+            document.getElementById('sevenDaysAfter').innerHTML = formattedDate;
+            document.getElementById('sevenDaysAfter1').innerHTML = formattedDate;
+            document.getElementById('sevenDaysAfter2').innerHTML = formattedDate;
+            document.getElementById('sevenDaysAfter3').innerHTML = formattedDate;
+        }
+        updateSevenDaysAfterDate();
+        setInterval(updateSevenDaysAfterDate, 86400000);
+
+        // 
+        document.addEventListener("DOMContentLoaded", function() {
+      setInterval(changeClass, 1000); // Call the function every 3 seconds
+    });
+
+//     function changeClass() {
+//       var chairIcons = document.querySelectorAll('.chair-icon');
+// chairIcons.forEach(function(chairIcon) {
+//         if (chairIcon.classList.contains('fa-chair')) {
+//           chairIcon.classList.toggle('fa-check');
+//         } else {
+//           chairIcon.classList.toggle('fa-chair');
+//         }
+//       });
+//     }
+
+        //
+        window.onload = function () {
+    var coiban = localStorage.getItem('coibansl');
+    document.getElementById('coiban').innerHTML = coiban;
+
+    var coich = localStorage.getItem('coichsl');
+    document.getElementById('coich').innerHTML = coich;
+
+    var triway = localStorage.getItem('triwaysl');
+    document.getElementById('triway').innerHTML = triway;
+
+    var banoo = localStorage.getItem('banoosl');
+    document.getElementById('banoo').innerHTML = banoo;
+};
+
+document.getElementById('subform').addEventListener('submit',function(event){
+var sub=document.getElementById('subsuc').value;
+if (!sub.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+  event.preventDefault();
+  alert('invalid text')
+}
+document.getElementById('subform').reset();
+return false;
+            });
+        
+</script>
+
+</body>
+</html>
+
+
+

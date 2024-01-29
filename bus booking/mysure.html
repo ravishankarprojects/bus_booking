@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus booking</title>
+    <link rel="shortcut icon" href="images/logobus.PNG">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</head>
+<body>
+    <div >
+        <nav class="navbar navbar-expand-lg fixed-top "  id="navbar">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="busicon.html">
+                <i class="bi bi-bus-front-fill" id="busicon"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-bus-front-fill" viewBox="0 0 16 16">
+                    <path d="M16 7a1 1 0 0 1-1 1v3.5c0 .818-.393 1.544-1 2v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5V14H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2a2.496 2.496 0 0 1-1-2V8a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1V2.64C1 1.452 1.845.408 3.064.268A43.608 43.608 0 0 1 8 0c2.1 0 3.792.136 4.936.268C14.155.408 15 1.452 15 2.64V4a1 1 0 0 1 1 1zM3.552 3.22A43.306 43.306 0 0 1 8 3c1.837 0 3.353.107 4.448.22a.5.5 0 0 0 .104-.994A44.304 44.304 0 0 0 8 2c-1.876 0-3.426.109-4.552.226a.5.5 0 1 0 .104.994ZM8 4c-1.876 0-3.426.109-4.552.226A.5.5 0 0 0 3 4.723v3.554a.5.5 0 0 0 .448.497C4.574 8.891 6.124 9 8 9c1.876 0 3.426-.109 4.552-.226A.5.5 0 0 0 13 8.277V4.723a.5.5 0 0 0-.448-.497A44.304 44.304 0 0 0 8 4m-3 7a1 1 0 1 0-2 0 1 1 0 0 0 2 0m8 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m-7 0a1 1 0 0 0 1 1h2a1 1 0 1 0 0-2H7a1 1 0 0 0-1 1"/>
+                  </svg>
+              </a>
+              <button class="navbar-toggler text-bg-danger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active text-white" aria-current="page" href="index.html" id="navbtn">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="about.html" id="navbtn">About</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="navbtn">
+                      Services
+                    </a>
+                    <ul class="dropdown-menu text-bg-success">
+                      <li><a class="dropdown-item text-white" href="businfo.html" id="navbtn">Bus Info</a></li>
+                      <li><hr class="dropdown-divider text-white"></li>
+                      <li><a class="dropdown-item text-white" href="bill.html" id="navbtn">Booking Bus</a></li>
+                      <li><hr class="dropdown-divider text-white"></li>
+                      <li><a class="dropdown-item text-white" href="package.html" id="navbtn">Packages</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="contact.html" id="navbtn">Contact</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Subscribe" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Subscribe</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+        </div>
+        
+        <section>
+            <section id="content">
+                    <div data-aos="zoom-out-down" data-aos-duration="2000">
+                        <center><h1>Mysore</h1>
+                             <br><br>
+                        </center>
+
+<!---->
+<div class="container text-center">
+    <div class="row">
+      <div class="col">
+       <img src="images/p1.jpeg"/>
+      </div>
+      <div class="col" style="padding-top: 30px;">
+        <h5>mysore is a good place to visit and enjoy its culture.It is suited in karnataka state.
+            we have a good package service to enjoy.This was approved by the Government of India in October 2014, 
+            and Mysore was officially renamed, along with twelve other cities</h5>
+      </div>
+    </div>
+  </div><br><br>
+
+  <table class="table table-success">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">tourist spot</th>
+        <th scope="col">name</th>
+        <th scope="col">details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td><img src="images/my1.jpeg" alt=""  width="80%"></td>
+        <td>Brindavan garden</td>
+        <td>openning times 10.00 to 8.00pm<br>
+            &DoubleLeftRightArrow; mindful place its a picnic spot and mysore maharaj created 
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td><img src="images/my2.jpeg" alt="" srcset=""  width="80%"></td>
+        <td>mysore place</td>
+        <td>openning times our own<br>
+            &DoubleLeftRightArrow; traditional of mysore since 1000long years old,more traditional,cultural,historical. </td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td><img src="images/my3.jpeg" alt="" srcset=""  width="80%"></td>
+        <td>chamundi</td>
+        <td>openning times 10.00 to 5.00pm<br>
+            &DoubleLeftRightArrow; traditional place in karnataka to hold a gloriship to devotee
+        </td>
+      </tr>
+    </tbody>
+  </table>
+<!---->
+
+                        <!-- btn -->
+                        <div>
+                          <div class="row" style="padding: 30px;">
+                            <div class="col-sm-6 text-center">
+                              <a id="bookbtn" onclick="window.history.back()" style="background-color: rgb(122, 172, 236); padding: 15px; color:white;
+             text-decoration: none;font-size: 20px;text-shadow: 2px 3px 5px red;box-shadow: 0px 0px 8px yellow;">
+              back to package</a><br><br>
+                            </div>
+                            <div class="col-sm-6 text-center">
+                              <a id="bookbtn" href="alapula.html" onclick="window.history.forward()" style="background-color: rgb(122, 172, 236); padding: 15px; color:white;
+                              text-decoration: none;font-size: 20px;text-shadow: 2px 3px 5px red;box-shadow: 0px 0px 8px yellow;">
+                              next page</a><br><br>
+                            </div>
+                          </div>
+                        </div>
+
+                        
+                    </div>
+                </section>
+        </section>
+
+        <script>
+            AOS.init();
+          </script>
+    
+    </body>
+    </html>

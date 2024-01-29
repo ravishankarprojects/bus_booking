@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input to Class Example</title>
+</head>
+<body>
+
+  <form id="personForm">
+    <label for="nameInput">Name:</label>
+    <input type="text" id="nameInput">
+
+    <label for="ageInput">Age:</label>
+    <input type="number" id="ageInput">
+
+    <button type="submit">Create Person</button>
+  </form>
+
+  <script>
+    // Define a Person class
+    class Person {
+      constructor(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+    }
+
+    // Array to store existing persons
+    const persons = [];
+
+    // Get the form element
+    var personForm = document.getElementById('personForm');
+
+    // Event listener to create a Person instance with form values
+    personForm.addEventListener('submit', function(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+
+      // Get input values
+      var nameInput = document.getElementById('nameInput').value;
+      var ageInput = document.getElementById('ageInput').value;
+
+      // Check if a person with the same name already exists
+      if (persons.some(person => person.name === nameInput)) {
+        alert('Person with the same name already exists!');
+      } else {
+        // Create a new Person instance
+        var newPerson = new Person(nameInput, ageInput);
+
+        // Add the newPerson to the persons array
+        persons.push(newPerson);
+
+        // Do something with the newPerson object (e.g., log it)
+        console.log(newPerson);
+
+        // Optionally, clear the form fields
+        personForm.reset();
+      }
+    });
+
+    const hoursInADay = 24;
+const millisecondsInAnHour = 60 * 60 * 1000; // 1 hour = 60 minutes * 60 seconds * 1000 milliseconds
+
+const hours = 42;
+const milliseconds = hours * millisecondsInAnHour;
+
+console.log(milliseconds);
+
+  </script>
+
+</body>
+</html>

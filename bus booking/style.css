@@ -1,0 +1,94 @@
+
+*{
+    background-color: rgb(75, 71, 71);
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#navbtn{
+    text-shadow: 2px 3px rgb(15, 15, 15),3px 4px 3px rgb(219, 68, 68) ;
+    font-size: 20px;
+}
+#theme{
+    text-wrap:balance;
+    font-size: 25px;
+}
+#imglogo{
+    text-align: center;
+    z-index: 1;
+    width: 500px;
+    height: 300px;
+}
+#content{
+    padding: 55px;
+}
+h1{
+    padding: 20px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-shadow: 2px 3px 2px chocolate,2px 3px 4px yellowgreen;
+  
+}
+h2{
+    text-shadow: 2px 3px 2px rgb(44, 35, 29),2px 3px 4px yellowgreen;
+    
+}
+#txt{
+    size: 20px;
+}
+#iconbtn>i{
+    position: absolute;
+}
+.fa-chair{
+    color: goldenrod;
+}
+.fa-life-ring{
+    color: black;
+}
+#grow:hover{
+transform: scale(1.2);
+z-index: 1;
+cursor: grab;
+transition: 2s;
+position: relative;
+box-shadow: 0px 0px 5px rgb(20, 194, 121),0px 0px 30px rgb(165, 75, 145),0px 0px 90px rgb(218, 158, 9);
+}
+#animbus{
+    animation-name: animbus;
+    animation-duration: 4s;
+    animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+}
+@keyframes animbus {
+    0%{
+       transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+#aboutbus{
+    position: sticky;
+}
+#chairicon{
+    cursor: pointer;
+}
+#bookbtn{
+ animation-name: bookbtn;
+ animation-duration: 1s;
+ animation-timing-function: ease-in;
+ animation-iteration-count: infinite;  
+}
+@keyframes bookbtn {
+    0%{
+        background-color:yellow;
+        color: white;
+    }
+    100%{
+        background-color:grey;
+        color:white ;
+
+    }
+}
+a{
+    cursor:alias ;
+}

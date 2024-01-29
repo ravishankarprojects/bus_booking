@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus booking</title>
+    <link rel="shortcut icon" href="images/logobus.PNG">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- fontasome cdn -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+<body>
+    <div >
+        <nav class="navbar navbar-expand-lg fixed-top "  id="navbar">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="busicon.html">
+                <i class="bi bi-bus-front-fill" id="busicon"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-bus-front-fill" viewBox="0 0 16 16">
+                    <path d="M16 7a1 1 0 0 1-1 1v3.5c0 .818-.393 1.544-1 2v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5V14H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2a2.496 2.496 0 0 1-1-2V8a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1V2.64C1 1.452 1.845.408 3.064.268A43.608 43.608 0 0 1 8 0c2.1 0 3.792.136 4.936.268C14.155.408 15 1.452 15 2.64V4a1 1 0 0 1 1 1zM3.552 3.22A43.306 43.306 0 0 1 8 3c1.837 0 3.353.107 4.448.22a.5.5 0 0 0 .104-.994A44.304 44.304 0 0 0 8 2c-1.876 0-3.426.109-4.552.226a.5.5 0 1 0 .104.994ZM8 4c-1.876 0-3.426.109-4.552.226A.5.5 0 0 0 3 4.723v3.554a.5.5 0 0 0 .448.497C4.574 8.891 6.124 9 8 9c1.876 0 3.426-.109 4.552-.226A.5.5 0 0 0 13 8.277V4.723a.5.5 0 0 0-.448-.497A44.304 44.304 0 0 0 8 4m-3 7a1 1 0 1 0-2 0 1 1 0 0 0 2 0m8 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m-7 0a1 1 0 0 0 1 1h2a1 1 0 1 0 0-2H7a1 1 0 0 0-1 1"/>
+                  </svg>
+              </a>
+              <button class="navbar-toggler text-bg-danger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active text-white" aria-current="page" href="index.html" id="navbtn">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="about.html" id="navbtn">About</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="navbtn">
+                      Services
+                    </a>
+                    <ul class="dropdown-menu text-bg-success">
+                      <li><a class="dropdown-item text-white" href="businfo.html" id="navbtn">Bus Info</a></li>
+                      <li><hr class="dropdown-divider text-white"></li>
+                      <li><a class="dropdown-item text-white" href="book.html" id="navbtn">Booking Bus</a></li>
+                      <li><hr class="dropdown-divider text-white"></li>
+                      <li><a class="dropdown-item text-white" href="package.html" id="navbtn">Packages</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="contact.html" id="navbtn">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="adminlog.html" id="navbtn">Admin</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search" action="subscribers.php" method="post" id="subform">
+                  <input class="form-control me-2" id="subsuc" type="search" placeholder="Subscribe" aria-label="Search" name="subscribe">
+                  <button class="btn btn-outline-warning" type="submit" name="addsub">Subscribe</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+          <br><br><br><br><br>
+        </div>
+        
+      
+
+        <!-- form -->
+        <div class="container-fluid" >
+
+        <form class="row g-3 needs-validation" novalidate method="post" action="customer.php" id="myForm">
+            <div class="row justify-content-md-center"  data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine">
+
+           <div class="col-md-3">
+              <label for="validationCustom01" class="form-label">NAME</label>
+              <input type="text" class="form-control" id="validationCustom01" required name="name">
+              <div class="invalid-feedback" id="nameinvalid">
+                please provide name
+              </div>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-1">
+              <label for="validationCustom02" class="form-label">AGE</label>
+              <input type="number" class="form-control" id="validationCustom02" required name="age">
+              <div class="invalid-feedback">
+                please provide age
+              </div>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-3">
+              <label for="validationCustomUsername" class="form-label">EMAIL</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                <input type="email" name="email" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                  Please provide a email.
+                </div>
+              </div>
+            </div>
+        </div>
+        
+<!-- row1 -->
+<hr>
+<div class="row justify-content-md-center"  data-aos="fade-left"
+data-aos-offset="300"
+data-aos-easing="ease-in-sine">
+
+            <div class="col-md-2">
+              <label for="validationCustomDate" class="form-label">DATE OF TRAVEL</label>
+              <div class="input-group has-validation">
+                <input type="date" class="form-control" id="validationCustomDate" min="" 
+                aria-describedby="inputGroupPrepend" required name="date">
+                <div class="invalid-feedback" id="Datevalid">
+                  Invalid Date
+                </div>
+              </div>
+            </div>
+            <script>
+            function getCurrentDate() {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = (now.getMonth() + 1).toString().padStart(2, '0');
+    const day = now.getDate().toString().padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  }
+  document.getElementById('validationCustomDate').min = getCurrentDate();
+
+            </script>
+            
+<div class="col-md-1"></div>
+
+             <div class="col-md-2">
+              <label for="validationCustomtime" class="form-label">ARRIVAL TIME</label>
+              <div class="input-group has-validation">
+                <input type="time" name="atime" value="20:50" class="form-control" style="color: blue;"
+                id="validationCustomtime" aria-describedby="inputGroupPrepend" required readonly>
+                <div class="invalid-feedback">
+                  Please provide a arrival time
+                </div>
+              </div>
+            </div>
+            
+            
+<div class="col-md-1"></div>
+
+            <div class="col-md-2">
+              <label for="validationCustom03" class="form-label">PH/MOBILE NO</label>
+              <input type="tel" class="form-control" id="validationCustom03" required name="phno">
+              <div class="invalid-feedback">
+                Please provide a valid ph number
+              </div>
+            </div>
+        </div>
+        <hr>
+<!-- row2 -->
+
+<div class="row justify-content-md-center"  data-aos="fade-right"
+data-aos-offset="300"
+data-aos-easing="ease-in-sine">
+
+
+
+            <div class="col-md-2 ">
+                <label for="validationCustom02" class="form-label">ARRIVAL</label>
+                <input type="text" class="form-control" id="cityfrom" required style="color: blue;" 
+                value="coimbatore" readonly name="cityfrom">
+                <div class="invalid-feedback">
+                    Please select a valid arrival city
+                </div>
+            </div>
+            
+<div class="col-md-1"></div>
+
+            <div class="col-md-2">
+              <label for="validationCustomdtime" class="form-label">DEPARTURE TIME</label>
+                <input type="time" name="dtime" value="04:00" class="form-control" style="color: blue;"
+                id="validationCustomdtime" aria-describedby="inputGroupPrepend" required readonly>
+                <div class="invalid-feedback">
+                  Please provide a arrival time
+                </div>
+            </div>
+            
+<div class="col-md-1"></div>
+
+            <div class="col-md-2">
+                <label for="validationCustom02" class="form-label">DEPARTURE</label>
+                <input type="text" class="form-control" id="cityto" required 
+                 value="chennai" readonly name="cityto" style="color: blue;">
+                <div class="invalid-feedback">
+                    Please select a valid departure city
+                </div>
+              </div>
+        </div>
+        <hr>
+<!-- row3 -->
+
+<div class="row"  data-aos="fade-left"
+data-aos-offset="300"
+data-aos-easing="ease-in-sine">
+
+<div class="col-md-6">
+    <label for="validationCustom05" class="form-label">ADDRESS</label>
+    <input type="text" class="form-control" id="validationCustom05" required name="address">
+    <div class="invalid-feedback">
+      Please provide a Address
+    </div>
+  </div>
+            
+
+<div class="col-md-6">
+  <label for="validationCustom05" class="form-label">PROOF UPLOAD</label>
+        <input type="file" id="fileinput" name="file" class="form-control " id="validationCustom050" required>
+        <label for="">(eg: aadar,pan,driving license)</label>
+        <div class="invalid-feedback">
+          Please select file
+        </div>
+</div>     
+
+</div>
+<hr>
+   <!-- row4 -->
+
+   <div class="row"  data-aos="fade-right"
+   data-aos-offset="300"
+   data-aos-easing="ease-in-sine">
+
+   <div class="col-md-2"></div>
+
+    <div class="col-md-4">
+      <label for="validationCustom05" class="form-label">GENDER</label><br>
+      <input type="radio" id="validationCustom06" required name="Gender" value="male">
+      <label for="validationCustom05" class="form-label">Male</label>&nbsp;&VerticalLine;&nbsp;
+      <input type="radio" id="validationCustom07" required name="Gender" value="female">
+      <label for="validationCustom05" class="form-label">Female</label>&nbsp;&VerticalLine;&nbsp;
+      <input type="radio" id="validationCustom08" required name="Gender" value="transgender">
+      <label for="validationCustom05" class="form-label">Transgender</label>
+      <div class="invalid-feedback">
+        Please select gender
+      </div>
+    </div>
+
+    <div class="col-md-4">
+        <label for="validationCustom05" class="form-label">BUSTYPE</label>
+        <input type="text" class="form-control" id="busselect" required 
+        name="bustype" value="sleeper" readonly style="color: blue;">
+        <div class="invalid-feedback">
+          Please provide a Address
+        </div><br>
+   </div>
+   
+   <div class="col-md-2"></div><hr>
+  
+   <!-- row5 -->
+
+   <!--chair seats-->
+   <div  id="iconbtn" >
+    <center>
+      <label for="validationCustom999" class="form-label">PLEASE SELECT SEATS</label>
+          <table id="chairicon" data-aos="zoom-in" data-aos-duration="3000" aria-required="true">
+            <tr>
+              <td><hr></td>
+              <td><hr></td>
+              <td><hr></td>
+              <td><hr></td>
+              <td><hr></td>
+              <td><hr></td>
+              <td><hr></td>
+              <td><hr></td>
+              <td><hr></td>
+              <td><hr></td>
+              <td><hr></td>
+              <td><hr></td>
+            </tr>
+    
+            <tr>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="sw1"><h5>s1</h5></i>
+              </td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="s2"><h5>s2</h5></i>
+              </td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="s3"><h5>s3</h5></i>
+              </td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="s4"><h5>s4</h5></i>
+              </td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="sw5"><h5>s5</h5></i>
+              </td>
+            </tr>
+    
+            <tr>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="sw6"><h5>s6</h5></i>
+              </td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="s7"><h5>s7</h5></i>
+              </td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="s8"><h5>s8</h5></i>
+              </td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="s9"><h5>s9</h5></i>
+              </td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="sw10"><h5>s10</h5></i>
+              </td>
+            </tr>
+    
+            <tr>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="sw11"><h5>s11</h5></i>
+              </td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="s12"><h5>s12</h5></i>
+              </td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="s13"><h5>s13</h5></i>
+              </td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="s14"><h5>s14</h5></i>
+              </td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="sw15"><h5>s15</h5></i>
+              </td>
+            </tr>
+    
+            <tr>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="sw16"><h5>s16</h5></i>
+              </td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="s17"><h5>s17</h5></i>
+              </td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="s18"><h5>s18</h5></i>
+              </td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="s19"><h5>s19</h5></i>
+              </td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="sw20"><h5>s20</h5></i>
+              </td>
+            </tr>
+    
+            <tr>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="sw21"><h5>s21</h5></i>
+              </td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="s22"><h5>s22</h5></i>
+              </td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="s23"><h5>s23</h5></i>
+              </td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="s24"><h5>s24</h5></i>
+              </td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="sw25"><h5>s25</h5></i>
+              </td>
+            </tr>
+    
+            <tr>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="sw26"><h5>s26</h5></i>
+              </td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="s27"><h5>s27</h5></i>
+              </td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="s28"><h5>s28</h5></i>
+              </td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="s29"><h5>s29</h5></i>
+              </td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="sw30"><h5>s30</h5></i>
+              </td>
+            </tr>
+    
+            <tr>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="sw31"><h5>s31</h5></i>
+              </td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="s32"><h5>s32</h5></i>
+              </td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="s33"><h5>s33</h5></i>
+              </td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="s34"><h5>s34</h5></i>
+              </td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="sw35"><h5>s35</h5></i>
+              </td>
+            </tr>
+    
+            <tr>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="sw36"><h5>s36</h5></i>
+              </td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="s37"><h5>s37</h5></i>
+              </td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="s38"><h5>s38</h5></i>
+              </td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="s39"><h5>s39</h5></i>
+              </td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="sw40"><h5>s40</h5></i>
+              </td>
+            </tr>
+    
+            <tr>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="sw41"><h5>s41</h5></i>
+              </td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="s42"><h5>s42</h5></i>
+              </td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="s43"><h5>s43</h5></i>
+              </td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="s44"><h5>s44</h5></i>
+              </td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="sw45"><h5>s45</h5></i>
+              </td>
+            </tr>
+    
+            <tr>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="sw46" ><h5>s46</h5></i>
+              </td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="s47" ><h5>s47</h5></i>
+              </td>
+              <td> <i class="fa-solid fa-chair fa-2x" onclick="changeicon(this);toggleIcon(this)" name="s48"><h5>s48</h5></i>
+              </td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td> &nbsp;
+              </td>
+              <td> <i class="fa-solid fa-door-open fa-2x fa-rotate-270 "></i></i>
+              </td>
+            </tr>
+    
+            <tr>
+              <td> <i class="fa-solid fa-life-ring fa-2x"></i> </td>
+              
+            </tr>
+    
+            <tr>
+              <td><hr></td>
+              <td><hr></td>
+              <td><hr></td>
+              <td><hr></td>
+              <td><hr></td>
+              <td><hr></td>
+              <td><hr></td>
+              <td><hr></td>
+              <td><hr></td>
+              <td><hr></td>
+              <td><hr></td>
+              <td><hr></td>
+            </tr>
+          </table>
+           
+<br>
+            <label for="">NO OF SEATS : </label><input type="text" id="output" style="border-radius: 6px;"  name="seats" readonly required>&nbsp; &VerticalBar;&VerticalBar;
+           <label for="">TICKET PRICE : &#8377;</label> <input type="text" name="amount" id="amt" style="border-radius: 6px;" readonly required>
+    <br><br><br>
+            
+    </center>  
+    <div class="invalid-feedback">
+      Please select seats
+    </div>  
+          </div>
+
+   <!-- chair close -->
+
+    <div class="col-12" >
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+        <label class="form-check-label" for="invalidCheck">
+          Agree the above Entered information are correct & changes may not allowed after submitting.  
+        </label>
+        <div class="invalid-feedback">
+          You must agree before submitting.
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+     <center><button class="btn btn-warning text-white" type="submit" name="bookbus">Submit form</button></center> <br><br><br>
+    </div>
+ <!-- row6 -->
+
+          </form>
+
+
+</div>
+
+
+      
+
+        <script>
+            AOS.init();
+
+            (() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+
+
+//no of seats
+var iconchair = document.querySelectorAll("i.fa-chair");
+var iconCount = iconchair.length;
+if (iconCount.disabled=true) {
+    console.log(iconCount);
+}
+
+
+
+//seats book
+var clickedIconNames = [];
+function toggleIcon(icon) {
+ //amt
+ const chairIcons = document.querySelectorAll('.fa-chair');
+      const checkIcons = document.querySelectorAll('.fa-check');
+      const chairCount = chairIcons.length;
+      const checkCount = checkIcons.length;
+      let multipliedCheckCount = checkCount > 0 ? checkCount * 1000 : 0;
+    //icon push
+    var iconName = icon.getAttribute("name");
+    var index = clickedIconNames.indexOf(iconName);
+    if (index === -1) {
+      clickedIconNames.push(iconName);
+      
+    } else {
+      clickedIconNames.splice(index, 1);
+
+    }
+    //output
+   document.getElementById('output').value=clickedIconNames;
+   document.getElementById('amt').value= multipliedCheckCount;
+  }
+
+
+  function setRedColor(iconName) {
+// Find the icon by its name and set the color to red
+var iconList = iconName.split(',');  // Split the stored values into an array
+iconList.forEach(function(iconName) {
+var icon = document.querySelector('[name="' + iconName + '"]');
+if (icon) {
+  icon.style.color = 'red';
+  icon.style.cursor="no-drop"
+  icon.disabled = true;
+  icon.classList.remove('fa-chair');
+  console.log("Length of iconList:", iconList.length);
+}
+});
+var availableIconCount = document.querySelectorAll('.fa-chair').length;
+    console.log(availableIconCount);
+    localStorage.setItem('coichsl',availableIconCount);
+
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    var storedValue = localStorage.getItem('reserve');
+    if (storedValue) {
+        setRedColor(storedValue);
+    }
+});
+function changeicon(icon) {
+    var iconName = icon.getAttribute("name");
+    var storedValue = localStorage.getItem('reserve');
+    console.log(storedValue, iconName);
+    
+    // Check if the icon name is in the stored values
+    if (storedValue && storedValue.includes(iconName)) {
+        // Hide the icon
+        iconName.style.display = "none";
+    } else {
+        // Toggle the 'fa-check' class
+        icon.classList.toggle('fa-check');
+    }
+}
+
+  
+
+  
+  //input conditions
+  document.getElementById('myForm').addEventListener('submit', function(event) {
+//file condition
+var fileinput = document.getElementById("fileinput");
+var allowedExtension = ['.pdf', '.jpeg', '.png', '.jpg', '.webp'];
+var maxFileSize = 5 * 1024 * 1024; // 5MB only allowed
+if (!fileinput.files || !fileinput.files[0]) {
+    alert("Please select a file");
+} else {
+    var selectedFile = fileinput.files[0];
+    var fileExtension = '.' + selectedFile.name.split('.').pop();
+
+    if (!allowedExtension.includes(fileExtension)) {
+        alert("Invalid file type. Allowed file types are: " + allowedExtension.join(','));
+    }
+
+    if (selectedFile.size > maxFileSize) {
+        alert("File size exceeds the limit. The maximum file size allowed is 5MB");
+    }
+}
+
+
+
+//name condition
+var conditionname= document.getElementById('validationCustom01').value;
+if (!conditionname.match(/^[a-zA-Z\s]+$/) || conditionname=="") {
+alert('Invalid name,only alaphabets or please provide name');
+}
+else{
+  localStorage.setItem('name', conditionname);
+}
+
+
+
+//phno condition
+var phoneNumber =document.getElementById('validationCustom03').value.trim(); 
+if (phoneNumber.length !== 10 || phoneNumber==="") {
+alert('Invalid phone number length. Please enter a 10-digit phone number or please provide phno number ');
+}
+else{
+localStorage.setItem('phno',phoneNumber);
+}
+
+
+//email condition
+var email=document.getElementById('validationCustomUsername').value
+if (!email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/) || email=="") {
+  alert('invalid format of email or please provide email')
+}
+else{
+  localStorage.setItem('eadd',email);
+}
+
+//ticket
+var age=document.getElementById('validationCustom02').value
+if (age) {
+  localStorage.setItem('age', age);
+}
+else{
+  alert('please provide your age');
+}
+// 
+var date=document.getElementById('validationCustomDate').value
+if (date) {
+  localStorage.setItem('date',date);
+} else {
+  alert('please provide your date of travel');
+}
+// 
+var from=document.getElementById('cityfrom').value
+if (from) {
+  localStorage.setItem('cityfrom',from);
+} else {
+  alert('please provide  arrival city');
+}
+// 
+var to=document.getElementById('cityto').value
+if (to) {
+  localStorage.setItem('cityto',to);
+} else {
+  alert('please provide your departure city')
+}
+// 
+var address=document.getElementById('validationCustom05').value
+if (address) {
+  localStorage.setItem('address',address);
+} else {
+ alert('please provide your address') 
+}
+// 
+// var seatarr =[];
+var sb=document.getElementById('output').value;
+if (sb) {
+      localStorage.setItem('output',sb);
+    // seatarr.push(sb);
+ localStorage.setItem("reserve",sb);
+//  console.log(seatarr);
+} else {
+  alert('please select seats, by selecting seat icons')
+}
+            
+       
+
+// 
+var amt=document.getElementById('amt').value;
+if (amt!==0) {
+  localStorage.setItem('amt',amt);
+}
+else{
+  alert('Amount invalid,please select seats for booking')
+}
+// 
+var genderInput = document.querySelector('input[name="Gender"]:checked');
+if (genderInput) {
+  var gender = genderInput.value;
+  localStorage.setItem('gender', gender);
+} else {
+  alert('Please select a gender');
+}
+var clas=document.getElementById('busselect').value;
+if (clas) {
+  localStorage.setItem('class',clas);
+}
+else{
+  alert('select your comfort bus type');
+}
+var atime=document.getElementById('validationCustomtime').value;
+localStorage.setItem('atime',atime);
+var dtime=document.getElementById('validationCustomdtime').value;
+localStorage.setItem('dtime',dtime);
+
+});
+
+//subcribers condition
+document.getElementById('subform').addEventListener('submit',function(event){
+var sub=document.getElementById('subsuc').value;
+if (!sub.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+  event.preventDefault();
+  alert('invalid text')
+}
+document.getElementById('subform').reset();
+return false;
+            });
+
+
+          </script>
+    
+    </body>
+    </html>
